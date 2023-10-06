@@ -25,7 +25,7 @@ router.get('/:id', async (req, res) => {
   try {
     const categoryData = await Category.findByPk(req.params.id,{
       include: [{ model: Product }],
-    }):
+    });
     res.status(200).json(categoryData);
   } catch (err) {
     res.status(500).json(err);
@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
   // create a new category
   try{
     const categoryData = await Category.create({
-      Category_name: req.body.Category_name,
+      category_name: req.body.category_name,
     });
     res.status(200).json(categoryData);
   }catch (err) {
@@ -48,8 +48,14 @@ router.put('/:id', async (req, res) => {
   // update a category by its `id` value
   // route help from stackOverFlow
   try{
-    const categoryData = await Category.put({
+    const categoryData = await Category.update({
       category_name: req.body.category_name,
+    },
+    {
+      // Gets the books based on the isbn given in the request parameters
+      where: {
+        id: req.params.id
+      },
     })
 
     if (!categoryData) {
