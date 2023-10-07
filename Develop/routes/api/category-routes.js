@@ -52,8 +52,7 @@ router.put('/:id', async (req, res) => {
       category_name: req.body.category_name,
     },
     {
-      // Gets the books based on the isbn given in the request parameters
-      where: {
+        where: {
         id: req.params.id
       },
     })
@@ -79,7 +78,7 @@ router.delete('/:id', async (req, res) => {
     })
 
     if (!categoryData) {
-      res.status(400).json({ message: 'no catebory with that id'});
+      res.status(400).json({ message: 'no category with that id'});
       return;
     }
     res.status(200).json(categoryData);
