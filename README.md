@@ -21,7 +21,7 @@
   to install this program you will need to copy over the files and run an npm install.
 
 ## usage
-  Once you have done that you will ned to open a terminal in the schema.sql file, log in to mysql, then source the schema. After that open a different terminal in the server.js file and do an npm run seed, once it has seeded you can now do npm start and it will load the database and you can modify it using insomina.
+  Once you have done that you will need to open a terminal in the schema.sql file, log in to mysql, then source the schema. After that open a different terminal in the server.js file and do an npm run seed, once it has seeded you can now do npm start and it will load the database and you can modify it using insomina.
 [ecommDatabase walkthough video](https://github.com/astrunk87/ecommDatabase/assets/134554632/8f7b877b-551b-4fe1-8f36-2efa54a2ad4e)
 
 
@@ -30,7 +30,7 @@
 
 ## Contributions 
   
-  school work and stack overflow
+  school work and stack overflow, both are noted in the code
 
 ## Testing 
   
